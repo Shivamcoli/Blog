@@ -3,7 +3,7 @@
 A full-stack personal blog platform built with:
 
 - 🌐 Frontend: Next.js 14 + TypeScript + CSS (custom)
-- ⚙️ Backend: FastAPI (Python)
+- ⚙️ Backend: Node.Js
 - 🔒 JWT-based authentication
 - ✍️ Users can sign up, log in, and create/view posts
 

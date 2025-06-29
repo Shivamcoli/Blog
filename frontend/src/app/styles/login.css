@@ -1,0 +1,94 @@
+/* src/styles/login.css */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #1f2937; /* dark slate background */
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+}
+
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.login-box {
+  background-color: #e5e7eb;
+  padding: 2rem 2rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  max-width: 400px;
+  width: 100%;
+}
+
+.login-box h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  color: #1f2937;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #f9fafb;
+  color: #111827;
+}
+
+.login-box input::placeholder {
+  color: #9ca3af;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: #dc2626;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.login-box button:hover {
+  background-color: #b91c1c;
+}
+
+.login-message {
+  margin-top: 1rem;
+  text-align: center;
+  color: #1f2937;
+  font-size: 0.95rem;
+}
+/* Redirect to signup section */
+.login-redirect {
+  margin-top: 1rem;
+  text-align: center;
+  color: #444;
+}
+
+.login-redirect button {
+  margin-top: 0.5rem;
+  background-color: #dc2626; /* gray-500 */
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}

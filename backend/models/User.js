@@ -20,6 +20,10 @@ class User {
   static findByEmail(email) {
     return users.find(user => user.email === email);
   }
+
+    static findById(id) {
+      return users.find(user => user.id === id);
+    }
 }
 
 module.exports = User;

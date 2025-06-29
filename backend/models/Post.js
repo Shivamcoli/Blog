@@ -8,12 +8,13 @@ class Post {
       id: uuidv4(),
       title,
       content,
-      authorId,
+      authorId, // ✅ this must exist
       createdAt: new Date().toISOString(),
     };
     posts.unshift(newPost);
     return newPost;
   }
+
 
   static getAll() {
     return posts;

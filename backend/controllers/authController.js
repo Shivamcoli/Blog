@@ -1,4 +1,4 @@
-const User = require('../models/user'); // or '../models/User' based on actual file name
+const User = require('../models/User'); // or '../models/User' based on actual file name
 const bcrypt = require('bcryptjs');
 const { generateToken } = require('../utils/jwt'); // ✅ Make sure this file exists
 

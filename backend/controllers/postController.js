@@ -1,4 +1,5 @@
 const Post = require('../models/Post');
+const User = require('../models/User');
 
 const createPost = (req, res) => {
   const { title, content } = req.body;
@@ -14,9 +15,19 @@ const createPost = (req, res) => {
 
 const getAllPosts = (req, res) => {
   const author = req.query.author;
-  const posts = author ? Post.getByAuthor(author) : Post.getAll();
-  res.json(posts);
+  const rawPosts = author ? Post.getByAuthor(author) : Post.getAll();
+
+  const postsWithAuthorEmail = rawPosts.map((post) => {
+    const user = User.findById(post.authorId);
+    return {
+      ...post,
+      authorEmail: user ? user.email : 'Unknown',
+    };
+  });
+
+  res.json(postsWithAuthorEmail);
 };
+
 
 const updatePost = (req, res) => {
   const postId = req.params.id;
